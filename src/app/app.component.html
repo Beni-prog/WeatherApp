@@ -10,12 +10,12 @@
   <form (submit)="getWeather(city.value); $event.preventDefault()">
     <input type="text" name="city" #city placeholder="Enter city name" required />
     <input type="submit" value="Get Weather" />
-    <p>Current city: <span id="weather-city"></span></p>
-    <p>Weather description: <span id="weather-description"></span></p>
-    <p>Temperature: <span id="weather-temperature"></span></p>
-    <p>Humidity: <span id="weather-humidity"></span></p>
-    <p>Wind: <span id="weather-wind"></span></p>
-    <p>Visibility: <span id="weather-visibility"></span></p>
+    <p>🌆<b>Weather for: </b><span id="weather-city"></span></p>
+    <p>🌦️<b>Description: </b><span id="weather-description"></span></p>
+    <p>🌡️<b>Temperature: </b><span id="weather-temperature"></span></p>
+    <p>💧<b>Humidity: </b><span id="weather-humidity"></span></p>
+    <p>💨<b>Wind: </b><span id="weather-wind"></span></p>
+    <p>🌫️<b>Visibility: </b><span id="weather-visibility"></span></p>
   </form>
   <footer>
     <p>Made with 🤍 by <a href="https://www.linkedin.com/in/beniamin-ac%C4%83linei-636b45165/" target="_blank">Beniamin Acălinei</a></p>
