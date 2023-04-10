@@ -53,7 +53,9 @@ export class AppComponent {
           document.getElementById("weather-wind")!.textContent = `${data.wind.speed} m/s`;
           document.getElementById("weather-description")!.textContent = `${data.weather[0].description}`;
         })
-        .catch((error: any) => console.error(error));
+        .catch((error: any) => {
+            window.alert('An error occurred. Please try again later.');
+          });
       return false; // Prevent form submission
   }
 
