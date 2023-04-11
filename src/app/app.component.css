@@ -11,7 +11,11 @@ body {
       html {
         overflow: hidden;
       }
-
+      #ul_top_hypers {
+          display: flex;
+          justify-content:space-around;
+          list-style-type:none;
+      }
       #weather {
         margin: 10px auto;
         flex: 1;
@@ -34,13 +38,39 @@ body {
       #weather p {
         margin: 20px;
         font-size: 24px;
+          margin: 10px;
+          padding: 5px;
       }
       #weather img {
         width: 100px;
       }
       form {
         margin-top: 20px;
-        text-align: center;
+        display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      form input[type="submit"]:hover {
+        background-color: #16a085;
+      }
+      form input[type="submit"] {
+        background-color: #1abc9c;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      form input[type="text"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-right: 10px;
+        font-size: 16px;
       }
       input[type="text"] {
         padding: 10px;
@@ -51,6 +81,7 @@ body {
         width: 200px;
       }
       input[type="submit"] {
+        margin: 10px 10px;
         padding: 10px 20px;
         font-size: 16px;
         border-radius: 5px;
@@ -72,7 +103,11 @@ body {
         justify-content: center;
         align-items: center;
       }
-      a {
+      footer a {
+        color: #fff;
         text-decoration: none;
-        color: black;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }

@@ -5,18 +5,48 @@
 </head>
 <body>
 <div id="weather">
-  <h2>Weather App</h2>
-  <p><img id="weather-icon" src="" alt="weather icon" /></p>
-  <form (submit)="getWeather(city.value); $event.preventDefault()">
-    <input type="text" name="city" #city placeholder="Enter city name" required />
-    <input type="submit" value="Get Weather" />
-    <p>🌆<b>Weather for: </b><span id="weather-city"></span></p>
-    <p>🌦️<b>Description: </b><span id="weather-description"></span></p>
-    <p>🌡️<b>Temperature: </b><span id="weather-temperature"></span></p>
-    <p>💧<b>Humidity: </b><span id="weather-humidity"></span></p>
-    <p>💨<b>Wind: </b><span id="weather-wind"></span></p>
-    <p>🌫️<b>Visibility: </b><span id="weather-visibility"></span></p>
-  </form>
+  <div id="div_top_hypers">
+    <h2>Weather App</h2>
+    <ul id="ul_top_hypers">
+      <li>
+        <p><img id="app-icon" src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" alt="app icon"/></p>
+        <form (submit)="getWeather(city.value); $event.preventDefault()">
+          <input type="text" name="city" #city placeholder="Enter city name" required />
+          <input type="submit" value="Get Weather" />
+        </form>
+        <form (submit)="subscribeToForecast(number.value); $event.preventDefault()">
+          <input type="text" name="number" #number placeholder="Enter phone number" required />
+          <input type="submit" value="Subscribe" />
+        </form>
+      </li>
+      <li>
+        <p><img id="weather-icon" src="" alt="weather icon" /></p>
+        <form>
+          <h2>Today: </h2>
+          <p>🌆<b>Weather for: </b><span id="weather-city"></span></p>
+          <p>🌦️<b>Description: </b><span id="weather-description"></span></p>
+          <p>🌡️<b>Temperature: </b><span id="weather-temperature"></span></p>
+          <p>💧<b>Humidity: </b><span id="weather-humidity"></span></p>
+          <p>💨<b>Wind: </b><span id="weather-wind"></span></p>
+          <p>🌫️<b>Visibility: </b><span id="weather-visibility"></span></p>
+        </form>
+      </li>
+      <li>
+        <p><img id="forecast-weather-icon" src="" alt="weather icon" /></p>
+        <form>
+          <h2>Tomorrow: </h2>
+          <p>🌆<b>Forecast for: </b><span id="forecast-weather-city"></span></p>
+          <p>🌦️<b>Description: </b><span id="forecast-weather-description"></span></p>
+          <p>🌡️<b>Temperature: </b><span id="forecast-weather-temperature"></span></p>
+          <p>💧<b>Humidity: </b><span id="forecast-weather-humidity"></span></p>
+          <p>💨<b>Wind: </b><span id="forecast-weather-wind"></span></p>
+          <p>🌫️<b>Visibility: </b><span id="forecast-weather-visibility"></span></p>
+        </form></li>
+    </ul>
+  </div>
+
+
+
   <footer>
     <p>Made with 🤍 by <a href="https://www.linkedin.com/in/beniamin-ac%C4%83linei-636b45165/" target="_blank">Beniamin Acălinei</a></p>
   </footer>
